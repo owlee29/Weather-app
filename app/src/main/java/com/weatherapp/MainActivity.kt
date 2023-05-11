@@ -160,7 +160,7 @@ class MainActivity : AppCompatActivity() {
                 .create<WeatherService>(WeatherService::class.java)
 
             val listCall: Call<WeatherResponse> = service.getWeather(
-                latitude, longitude, Constants.METRIC_UNIT, Constants.APP_ID
+                latitude, longitude, Constants.METRIC_UNIT, BuildConfig.API_KEY
             )
 
             showCustomProgressDialog()
